@@ -1,0 +1,486 @@
+/****** General ***********/
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+.fa-solid {
+    color: var(--main-color);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+    font-size: 85%;
+}
+.card-rating {
+    font-size: 80%; /* Ajustez la taille de la police selon vos besoins */
+    /* Autres styles... */
+}
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--main-bg-color)
+}
+
+/*style du header*/
+/* Styles spécifiques pour les onglets à gauche */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:px; /* Ajustement du padding pour l'espacement */
+    background-color: #ffffff; /* Fond du header */
+    margin-bottom: 20px;
+    margin-top: 30px;
+
+}
+
+/* Style des liens dans la navigation */
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    margin-right: 20px; /* Espacement entre les liens */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0065FC;
+}
+
+
+
+
+/* Style des liens dans la navigation */
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    margin-right: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 6px; /* Ajout d'un espace pour la barre */
+}
+
+
+.nav-link:hover {
+    color: #0065FC;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    top: -10px; /* Placer la barre un peu plus haute */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Rendre la barre plus fine */
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover::before {
+    background-color: #0065FC; /* Couleur de la barre au survol */
+}
+
+
+
+/* Style du logo et du slogan */
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.slogan {
+    margin: 0;
+    font-size: 24px;
+}
+
+
+/* Style du logo */
+.logo {
+    max-width: 50px; /* Largeur maximale */
+    height: auto;
+    margin-right: auto; /* Place le logo à droite en utilisant la marge automatique */
+    overflow: hidden; /* Cache le dépassement */
+}
+
+/* Styles pour les boutons */
+
+.filter-section {
+    display: flex;
+    align-items: center;
+   
+}
+
+ .filter-buttons {
+            display: flex;
+            flex-wrap: wrap; /* Permettre le retour à la ligne */
+            justify-content: flex-start;
+            margin-top: 20px;
+            margin-bottom: 10px; /* Ajuster l'espacement entre la barre de recherche et les boutons */
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid #F2F2F2;
+            border-radius: 20px;
+            background-color: transparent;
+            color: #000000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-right: 10px; /* Ajuster l'espacement horizontal entre les boutons */
+            margin-bottom: 10px; /* Espacement entre les lignes */
+        }
+
+        .filter-btn:last-child {
+            margin-right: 0; /* Supprimer la marge à droite du dernier bouton */
+        }
+
+        .filter-btn:hover {
+            background-color: #DEEBFF;
+            color: rgb(0, 0, 0);
+        }
+
+/* Styles pour la barre de recherche */
+.search-wrapper {
+    display: flex;
+  
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.location-icon {
+    padding: 10px;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: none;
+}
+
+.search-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+
+
+/****** Hebergements And Populaires ***********/
+.hebergements-and-populaires {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hebergements-and-populaires section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/****** Hebergements ***********/
+.hebergements {
+    width: 65%;
+}
+.hebergements-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.hebergements-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permet de passer à la ligne si l'espace est insuffisant */
+}
+
+.hebergements-cards .card {
+    width: 240px; /* Largeur fixe pour toutes les cartes */
+    margin-bottom: 20px;
+    margin-top: 33px;
+    height: 200px; /* Hauteur fixe pour toutes les cartes */
+}
+.hebergements-cards img {
+    width: 100%;
+    height: 110px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.hebergements-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.hebergements-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.hebergements-cards .card-subtitle {
+    margin: 0;
+}
+
+.hebergements-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+/****** Populaires ***********/
+.populaires {
+    width: 32%;
+}
+
+.populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.populaires-cards .card {
+    display: flex;
+    margin-top: 33px;
+}
+
+.populaires-cards img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.populaires-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populaires-cards .card-subtitle {
+    margin: 0;
+}
+
+.populaires-cards .card-rating {
+    margin-bottom: 5px;
+}
+/*  section activités */
+.sections-container {
+    display: flex;
+    flex-direction:row; /* Afficher les sections en colonne */
+    justify-content: space-between;
+}
+
+.activites {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.activites .card {
+    width: 297.5px;
+    height: 380px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 17px;
+    background-color: transparent;
+    border: none; /* Supprime les bordures */
+}
+
+
+.activites .card img {
+    
+    border-radius: 20px 20px 0 0; /* Appliquer uniquement le border-radius aux coins supérieurs */
+    object-fit: cover;
+    border: none; /* Pour enlever les bordures */
+    flex:auto
+    
+}
+
+.activites .card .card-content {
+    padding: 15px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Valeurs de l'ombre */
+    
+}
+
+.activites .card .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.activites .card .card-subtitle {
+    margin: 0;
+}
+
+
+
+.activites-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+}
+
+
+
+
+.hebergements,
+.activites {
+    vertical-align: top; /* Aligner les sections en haut */
+    box-sizing: border-box; /* Inclure les bordures et paddings dans la largeur */
+    padding: 0 10px; /* Ajouter un padding pour l'espacement entre les sections */
+    /* Autres styles nécessaires */
+}
+
+
+/* Ajout de styles pour les différentes sections du footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F2F2F2;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer-section {
+    width: 30%; /* Ajustez la largeur des sections selon vos besoins */
+}
+
+.footer-title {
+    margin-top: 0;
+    padding-bottom: 5px;
+    text-decoration: none; /* Pour enlever le soulignage */
+}
+.footer-section h4 {
+    text-decoration: none; /* Retire le soulignage */
+}
+
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+
+    .hebergements {
+        width: 100%;
+    }
+
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .populaires-cards a {
+        width: 30%;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 14px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+}
+/* Pour les écrans plus petits, ajustez la disposition si nécessaire */
+@media (max-width: 1024px) {
+    .hebergements-cards .card {
+        width: 100%; /* Pour afficher en une seule colonne sur les petits écrans */
+    }
+}
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    /* ... */
+}
